@@ -363,36 +363,60 @@ new Chart(ctxBurbujas, {
 
 const tablaSies = document.querySelector("#tabla-proyectos");
 const inputFiltro = document.getElementById("elInputBuscador");
-const URL_API = "https://api.myjson.online/v1/records/d1b10d83-f8a0-4ca2-b0fa-f4bef662ff5c";
+const URL_API = "https://api.myjson.online/v1/records/1a6e6fa8-0b24-408d-a6f9-a4d03d471b23";
 
 if (tablaSies && inputFiltro) {
-    fetch(URL_API)
+    fetch(URL_API, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+            "X-Requested-With": "XMLHttpRequest"
+        }
+    })
         .then((respuesta) => {
-            if (!respuesta.ok) throw new Error("Error al cargar el JSON: " + respuesta.status);
+            if (!respuesta.ok) throw new Error("Error del servidor: " + respuesta.status);
             return respuesta.json();
         })
         .then((objetoJSON) => {
-            const carreras = objetoJSON.data; 
+            console.log("Data cruda recibida de MyJSON:", objetoJSON); 
+            let carreras = null;
+            
+            if (Array.isArray(objetoJSON)) {
+                carreras = objetoJSON;
+            } else if (objetoJSON && objetoJSON.data) {
+                carreras = Array.isArray(objetoJSON.data) ? objetoJSON.data : objetoJSON.data.record;
+            } else if (objetoJSON && objetoJSON.record) {
+                carreras = objetoJSON.record;
+            }
+            if (!carreras || !Array.isArray(carreras)) {
+                throw new Error("Estructura de API desconocida. Revisa la consola.");
+            }
+
             tablaSies.innerHTML = "";
             
             carreras.forEach((carrera) => {
-                const arancelFormateado = Number(carrera.arancel).toLocaleString('es-CL', {
+                const arancelFormateado = Number(carrera.Arancel).toLocaleString('es-CL', {
                     style: 'currency', currency: 'CLP', minimumFractionDigits: 0
                 });
                 
+                const claseFila = carrera.Institución === "UNIVERSIDAD DE CHILE" ? 'class="fila-destacada"' : '';
+                
                 tablaSies.innerHTML += `
                     <tr ${claseFila}>
-                        <td>${carrera.institucion}<small>${carrera.nombre_carrera}</small></td><td>${carrera.area_disciplinar}</td><td>
-                            ${carrera.semestres} sem.
-                            <small style="display:block; color:rgb(102,102,102); font-size:0.8rem;">${carrera.certificacion}</small>
+                        <td>${carrera.Institución || 'No indicada'}<small>${carrera.Carrera || 'No indicada'}</small></td>
+                        <td>${carrera.Area || 'No aplica'}</td>
+                        <td>
+                            ${carrera.Semestres || '0'} sem.
+                            <small style="display:block; color:rgb(102,102,102); font-size:0.8rem;">${carrera.Grado || 'No aplica'}</small>
                         </td>
-                        <td>${arancelFormateado}</td><td>${carrera.vacantes}</td>
+                        <td>${arancelFormateado}</td>
+                        <td>${carrera.Vacantes || '0'} cupos</td>
                     </tr>`;
             });
         })
         .catch((error) => {
-            console.error("Error en la carga del buscador SIES:", error);
-            tablaSies.innerHTML = `<tr><td colspan="5" style="text-align:center; color:red;">No se pudo conectar con la base de datos del SIES.</td></tr>`;
+            console.error("Error crítico en el buscador:", error);
+            tablaSies.innerHTML = `<tr><td colspan="5" style="text-align:center; color:red;">Error de conexión con MyJSON: ${error.message}</td></tr>`;
         });
 
     function sinAcentos(str) {
