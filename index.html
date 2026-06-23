@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Fragmentación del Diseño</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet"
+        />
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav>
+            <div>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" fill="#e33e1b">
+                        <path
+                            d="M5.49,67.68v-21A4.62,4.62,0,0,1,10,42.09H56.65a4.14,4.14,0,0,1,4.43,4.43V47H10.41V67.68Zm0,4.92,15.86-.12-2.09,9.34,9.23-9.34H56.16V51.93h4.92V73a4.37,4.37,0,0,1-4.55,4.43H30.45L18.65,87.6H14l2.22-10.2H10A4.43,4.43,0,0,1,5.49,73ZM86.3,78.13,72.4,58.58H65.51V39.76a2.13,2.13,0,0,0-2.21-2.22H18.77V19.22a3,3,0,0,1,2.95-3H90.85a3.14,3.14,0,0,1,3.2,3V55.87a3,3,0,0,1-3.2,2.71H83.71l3.2,19.55Z"
+                        />
+                    </svg>
+                    Data Lab
+                </span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                        fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                    />
+                </svg>
+            </div>
+        </nav>
+
+        <header>
+            <img src="header.webp" />
+            <h3>DISEÑO EN CHILE</h3>
+            <h1>Fragmentación del Diseño</h1>
+            <h2>Cómo se diferencian los perfiles de institutos y universidades bajo un mismo nombre</h2>
+            <address>
+                Por <a href="https://github.com/YonahKJ">Paloma Vargas</a>, <a href="x">Constanza Pavez</a>,
+                <a href="https://github.com/Gas36">Gastón Meneses</a> y
+                <a href="https://github.com/profesorfaco">Felipe Cortez</a>
+            </address>
+            <time>Publicado el 23 de junio, 2026 05:00 p.m. GMT-4</time>
+        </header>
+
+        <main id="contenedor">
+            <p>
+                En el escenario contemporáneo de la educación superior chilena, la denominación "Diseño" ampara un
+                ecosistema de programas profundamente heterogéneo.
+            </p>
+
+            <p>
+                Bajo el marco normativo de la
+                <a href="https://www.bcn.cl/leychile/navegar?idNorma=1118991">Ley N° 21.091</a> sobre Educación Superior
+                y las regulaciones del
+                <a href="https://www.mifuturo.cl/sies/"
+                    >Servicio de Información de la Educación Superior (<small>SIES</small>)</a
+                >, coexisten distintas tipologías institucionales cuyas diferencias en la matriz de financiamiento, años
+                de acreditación y habilitación profesional configuran realidades radicalmente opuestas para una
+                <strong>misma disciplina</strong>:
+            </p>
+
+            <ul>
+                <li>
+                    <em>Universidades:</em> Instituciones orientadas por ley a la entrega de títulos profesionales y
+                    grados académicos. En esta base de datos se traducen en programas de 10 a 12 semestres de duración
+                    formal que otorgan el grado de Licenciado en Diseño, con estructuras de costos elevadas y una alta
+                    concentración de acreditación institucional avanzada.
+                </li>
+                <li>
+                    <em>Institutos Profesionales (<small>IP</small>):</em> Planteles facultados para otorgar títulos
+                    profesionales sin grado académico y títulos técnicos. Sus mallas de diseño promedian los 8 semestres
+                    de duración, prescindiendo de la licenciatura para acelerar la inserción laboral, con una oferta
+                    arancelaria competitiva y alta elegibilidad a la gratuidad estatal.
+                </li>
+                <li>
+                    <em>Centros de Formación Técnica (<small>CFT</small>):</em> Organismos enfocados exclusivamente en
+                    la formación técnica de nivel superior. Imparten carreras de diseño de ciclo corto, orientadas a la
+                    ejecución operativa, la producción digital y el dominio de herramientas técnicas específicas,
+                    ofreciendo el menor costo de entrada financiero y temporal al mercado.
+                </li>
+            </ul>
+
+            <p>
+                A través de un análisis cuantitativo de estas tres matrices, esta investigación examina si la
+                coincidencia en el nombre de la carrera responde a una identidad disciplinar común o si, por el
+                contrario, asistimos a la bifurcación definitiva del perfil del diseñador en Chile.
+            </p>
+
+            <h4>¿Cómo se distribuye y fragmenta la oferta del Diseño en Chile?</h4>
+
+            <p>
+                El siguiente diagrama de flujo permite rastrear el camino que recorre la disciplina desde su origen
+                institucional hasta su certificación final, evidenciando cómo se estructura la oferta académica actual.
+            </p>
+
+            <figure>
+                <div id="grafico-flujo"></div>
+                <figcaption>
+                    Tipo de institución, especialidad de la carrera y grado. Datos correspondientes al proceso 2026,
+                    obtenidos del
+                    <a href="https://www.mifuturo.cl/servicio-de-informacion-de-educacion-superior/" target="_blank"
+                        >Servicio de Información de Educación Superior (SIES)</a
+                    >, de la Subsecretaría de Educación Superior. Visualización de conjuntos paralelos, generada a
+                    través de <a href="https://www.rawgraphs.io/" target="_blank">RAWGraphs</a>.
+                </figcaption>
+            </figure>
+
+            <p>
+                Para visibilizar continuidades y quiebres estructurales en categorías multivariables, los
+                <a href="https://datavizcatalogue.com/ES/metodos/conjuntos_paralelos.html" target="_blank"
+                    >diagramas de conjuntos paralelos</a
+                >
+                resultan idóneos. Al proyectar los datos mediante bandas conectoras, el cruce de factores
+                institucionales y de titulación revela de inmediato un <strong>techo de cristal</strong> normativo en el
+                ecosistema chileno: mientras las universidades retienen el monopolio absoluto sobre el grado académico
+                de Licenciatura (indispensable para la continuidad de postgrado), los Institutos Profesionales
+                (<small>IP</small>) y Centros de Formación Técnica (<small>CFT</small>) absorben una matrícula masiva en
+                títulos que truncan y <strong>aíslan</strong> las trayectorias académicas avanzadas.
+            </p>
+
+            <p>
+                Bajo el mismo nombre de "Diseño", el sistema superior no ofrece una formación homogénea, sino una
+                segmentación definitiva del perfil profesional. Las universidades preservan el rol estratégico-teórico
+                de la disciplina, mientras que los <small>IP</small> y los <small>CFT</small> dominan la salida
+                operativa. Esta distribución termina
+                <strong>encapsulando a la gran mayoría de los egresados técnico-profesionales</strong> en un circuito
+                cerrado de solo ejecución, totalmente desconectado de la investigación y los ciclos académicos
+                superiores.
+            </p>
+
+            <h4>¿Cuál es el costo temporal y financiero de estudiar "Diseño" en Chile?</h4>
+
+            <p>
+                El costo de estudiar diseño en Chile cambia drásticamente según el camino elegido. Al cruzar el dinero
+                de la matrícula anual con el tiempo real de estudio (medido en semestres), el siguiente gráfico de
+                dispersión agrupa visualmente los programas según su tipo de institución.
+            </p>
+
+            <figure>
+                <canvas id="dispersion"></canvas>
+                <figcaption>
+                    Duración formal de los estudios y arancel anual de la carrera según cada institución. Datos 2026,
+                    obtenidos del
+                    <a href="https://www.mifuturo.cl/servicio-de-informacion-de-educacion-superior/" target="_blank"
+                        >Servicio de Información de Educación Superior (SIES)</a
+                    >, de la Subsecretaría de Educación Superior.
+                </figcaption>
+            </figure>
+
+            <p>
+                Para identificar patrones de distribución en estructuras complejas, el
+                <a href="https://datavizcatalogue.com/ES/metodos/diagrama_de_dispersion.html" target="_blank"
+                    >diagrama de dispersión</a
+                >
+                es la herramienta técnica ideal. Al mapear cada programa como un punto en un plano cartesiano, el cruce
+                de los ejes financiero y temporal evidencia la
+                <strong>formación de tres nichos independientes</strong> que polarizan la oferta real en Chile. El
+                análisis de esta sección aísla las tendencias del sistema mediante una muestra representativa que
+                contrasta las cuotas limitadas universitarias frente a la masificación del sector técnico-profesional.
+            </p>
+
+            <p>
+                La visualización expone una <strong>asimetría estructural severa</strong>: el sector de los
+                <small>CFT</small> se agrupa con firmeza en el cuadrante inferior izquierdo, concentrando carreras
+                operativas de ciclo corto y de menor costo anual. En el centro de la matriz, los
+                <small>IP</small> estandarizan mallas profesionales de 8 semestres con aranceles intermedios.
+                Finalmente, las universidades colonizan el extremo superior derecho, revelando que el acceso a la
+                Licenciatura exige un compromiso temporal de hasta 12 semestres y una inversión económica que duplica o
+                triplica a la formación técnica.
+            </p>
+
+            <h4>¿A cuál de todos los "Diseños" se van los estudiantes en Chile?</h4>
+
+            <p>
+                Conocer la estructura legal y los costos de las carreras no es suficiente para entender la verdadera
+                dimensión de la fragmentación del diseño en Chile. Para medir el impacto real de este fenómeno, es
+                indispensable mirar hacia las aulas y analizar dónde se está acumulando el grueso de los estudiantes.
+            </p>
+
+            <figure class="graph-wrapper">
+                <div class="canvas-container-burbujas">
+                    <canvas id="graficoBurbujas"></canvas>
+                </div>
+                <figcaption>
+                    <strong>Visualización de la Masa Estudiantil por Especialidad:</strong> Cada burbuja representa un
+                    programa consolidado a nivel nacional. El tamaño (área) de la burbuja es proporcional a la suma
+                    absoluta de vacantes anuales disponibles (Semestre 1 + Semestre 2). Revela de forma inmediata cómo
+                    el mercado técnico e IP absorbe a la gran mayoría de la población estudiantil en Chile.
+                </figcaption>
+            </figure>
+
+            <p>
+                Para dimensionar el volumen de matrícula y detectar asimetrías de escala en un sistema complejo, la
+                elección técnica ideal es el
+                <a href="https://datavizcatalogue.com/ES/metodos/grafico_de_burbujas.html" target="_blank"
+                    >gráfico de burbujas</a
+                >. Al introducir el área de cada esfera como una tercera variable numérica, el modelo visibiliza el peso
+                demográfico real de las aulas. La lectura visual es drástica: mientras el bloque universitario se
+                contrae en cohortes reducidas y selectivas en el extremo izquierdo (rara vez superando las 150 vacantes
+                anuales), el sector de los <small>IP</small> y <small>CFT</small> satura el espacio con esferas masivas
+                que representan entre 1.000 y 2.300 cupos nacionales.
+            </p>
+
+            <p>
+                Esta disparidad demuestra que el
+                <strong
+                    >modelo chileno canaliza masivamente a la población estudiantil hacia la educación técnica de alta
+                    densidad bajo una lógica de producción en masa</strong
+                >. Como consecuencia directa, la inmensa mayoría de los futuros diseñadores de Chile se forma bajo
+                perfiles estrictamente operativos. El gráfico hace evidente la paradoja del mercado: el grueso de los
+                estudiantes se acumula en las aulas de menor duración, las mismas que enfrentan el límite legal que les
+                impide continuar hacia la especialización avanzada o el postgrado.
+            </p>
+
+            <h4>¿En qué áreas del conocimiento se concentra el Diseño técnico y profesional?</h4>
+
+            <p>
+                El siguiente gráfico de tarta permite observar la distribución de los programas vigentes en Centros de
+                Formación Técnica e Institutos Profesionales según su área oficial de conocimiento, evidenciando el
+                fuerte sesgo formativo que predomina en este sector.
+            </p>
+
+            <figure class="graph-wrapper">
+                <div id="torta"></div>
+                <figcaption>
+                    Distribución porcentual de los programas de Diseño en el sector de CFT e IP y cantidad de
+                    instituciones reconocidas por área del conocimiento. Datos 2026, obtenidos del Servicio de
+                    Información de Educación Superior (SIES), de la Subsecretaría de Educación Superior.
+                </figcaption>
+            </figure>
+
+            <p>
+                Para identificar la fuerza de participación y la concentración sectorial dentro de un universo cerrado,
+                los
+                <a href="https://datavizcatalogue.com/ES/metodos/graficos_de_tarta.html" target="_blank"
+                    >gráficos de tarta</a
+                >
+                resultan idóneos. Al desglosar proporcionalmente las macroáreas oficiales asignadas por el
+                <small>SIES</small> a los <small>IP</small> y <small>CFT</small>, la composición de la torta revela un
+                <strong>desequilibrio crítico</strong> en la naturaleza de la formación técnica chilena: el área de
+                Humanidades y Arte ejerce un dominio casi absoluto, relegando a Ingeniería y Ciencias a un plano
+                testimonial.
+            </p>
+
+            <p>
+                Este sesgo formativo demuestra que el Diseño técnico-profesional se concibe de forma exclusiva desde un
+                enfoque creativo y estético tradicional, bloqueando su diversificación multidisciplinar. Al encapsular
+                la disciplina en el nicho de las industrias expresivas visuales, el sistema frena la integración de los
+                diseñadores en el sector productivo avanzado, privándolos de adquirir competencias clave en optimización
+                de procesos, manufactura industrial, desarrollo tecnológico o innovación de base científica.
+            </p>
+
+            <section id="seccion-buscador">
+                <div id="contenedor-buscador">
+                    <h3>Explora la Base de Datos</h3>
+                    <h4>Filtra por institución, palabra clave o régimen de arancel</h4>
+
+                    <input type="text" id="elInputBuscador" placeholder="Buscar carrera, universidad, instituto..." />
+
+                    <div id="contenedordetabla">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Institución y Programa</th>
+                                    <th>Área Disciplinar</th>
+                                    <th>Duración y Certificación</th>
+                                    <th>Arancel Anual</th>
+                                    <th>Vacantes 2026</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-proyectos"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <h5>Fuentes</h5>
+            <p>
+                <a href="https://mifuturo.cl/buscador-de-carreras/" target="_blank">Mi futuro Mineduc</a>;
+                <a href="https://acceso-sup.mineduc.cl/acceso-buscador/buscador-cu" target="_blank"
+                    >Acceso Mineduc - Buscador de Carreras Universitarias</a
+                >; <a href="https://www.eligecarrera.cl/aspx/index.aspx" target="_blank">Elige Carrera</a>
+            </p>
+        </main>
+
+        <footer>
+            <div>
+                <a href="https://www.reuters.com/graphics/CHINA-RUSSIA/byprnwgrdpe/" target="_blank"
+                    >Inspirado en Reuters</a
+                >
+                <a href="https://github.com/profesorfaco/troncal">Diseño y visualización de información</a>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
